@@ -1,0 +1,11 @@
+<h1>Course <%= @course.name %></h1>
+
+<p>
+  <%= @course.city %>
+</p>
+<p>
+  <%= link_to "Edit", edit_course_path %> - <%= link_to "Delete", course_path, method: :delete %>
+</p>
+<p>
+  <%= link_to "<< Back to Courses", courses_path %>
+</p>

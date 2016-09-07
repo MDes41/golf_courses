@@ -1,0 +1,20 @@
+<% if @course.errors.any? %>
+  <h2><%= pluralize(@course.errors.count, "error") %> prohibited this record from being saved:</h2>
+  <ul>
+    <% @course.errors.full_messages.each do |error_message| %>
+      <li>
+        <%= error_message %>
+      </li>
+    <% end %>
+  </ul>
+  <% end %>
+
+<%= form_for @course do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+
+  <%= f.submit %>
+<% end %>
